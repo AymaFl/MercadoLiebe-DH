@@ -18,10 +18,17 @@ body{
 }
 
 /* Header*/
+
 .main-header{
     background-color: var(--amarillo);
-    padding: 20px;
+    padding: 15px;
+    width: 100%
 }
+
+.copy-header{
+    text-align: center;
+}
+
 
 .burguer-menu{
     background-color: var(--azul);
@@ -41,7 +48,7 @@ body{
 
 .copy-header{
     font-weight: 400;
-    text-align: center;
+    align-items: center;
 }
 
 #lupa{
@@ -50,7 +57,7 @@ body{
 
 #banner{
     width: 100%;
-    display: none;
+    display: flex;
 }
 
 
@@ -74,10 +81,22 @@ body{
     font-size: 17px;
 }
 
+/*MAIN*/
+
+.tarjeta{
+    margin-bottom: 10px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
 
 h2.titulares{
+    justify-items: center;
     font-size: 24px;
     padding: 20px;
+}
+
+.titulares{
     text-align: center;
 }
 
@@ -96,57 +115,164 @@ main section article img{
     align-items: center;
 }
 
-main section article i,
+/*main article article i,
 .discount{
     color: var(--verde)
+}*/
+
+main article i{
+    color: var(--verde);
+    padding: 15px;
+    border: solid 1px var(--verde);
+    border-radius: 100%;
 }
 
 article div,
 .main-articulo{
     display: inline-block;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.tarjeta{
-    position: relative;
-    margin-bottom: 10px;
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    width: 100%;
+    padding: 15px;
+    border-top: solid  1px #ebebeb;
 }
 
 p.precios{
     font-size: 18px;
-    display: inline-block;
-    margin-left: 8px;
 }
 
 p.oferta {
     display: block;
     font-size: 16px;
     margin: auto;
+    color: var(--verde)
 }
 
-h3.descripcion{
-    color: var(--gris-oscuro)
+h4.descripcion{
+    color: var(--gris-oscuro);
+    font-weight: 300;
+    margin-bottom: 0px;
 }
 
 
 /* FOOTER*/
-
 footer{
-    background-color: var(--gris-claro);
-    padding: 15px;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 5px 5px;
+}
+footer section article,
+.menu-footer{
+    margin: 5px 0;
+}
+
+.subfooter{
+    display: block;
+    font-size: 12px;
+    font-weight: 200;
+    border-top: solid 1px var(--gris-oscuro);
+    padding: 0;
+}
+
+#iconos{
+    font-size: 2em;
+    margin-top: 5px;
+    color: var(--celeste);
 }
 
 .cuerpo-texto{
     font-size: 12px;
 }
 
+/*MEDIAQUARIES*/
 
-#iconos{
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: var(--celeste);
+@media (min-width: 426px){
+
+    .burguer-menu{
+        display: none;
+    }
+
+    .main-navbar{
+        display: block;
+    }
+
+    .main-navbar li{
+        margin: 5px;
+    }
+    
+    main section.productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    main section article,
+    .tarjeta{
+        width: 40%;
+        padding: 10px;
+        margin: 10px;
+    }
+
 }
+
+@media (min-width: 760px){
+
+    .main-header-top-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copy-header{
+        max-width: 300px;
+    }
+
+    .main-navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul{
+        align-items: center;
+        display: flex;
+    }
+
+    .main-navbar li{
+        margin: 0 5px;
+    }
+
+    section article,
+    .productos{
+        display: flex;
+        flex-wrap: none;
+        justify-content: space-around;
+    }
+    
+    main section article,
+    .tarjeta{
+        max-width: 20%;
+        padding: 10px;
+        margin: auto;
+    }
+
+    section,
+    .main-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article.menu-footer{
+        max-width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 5px;
+    }
+
+    article.subfooter{
+        display: flex;
+    }
+}
+
+
+
