@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+}
+
+/* BODY */
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--gris-claro);
+}
+
+/* Header*/
+.main-header{
+    background-color: var(--amarillo);
+    padding: 20px;
+}
+
+.burguer-menu{
+    background-color: var(--azul);
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.logo{
+    width: 200px;
+}
+
+.copy-header{
+    font-weight: 400;
+    text-align: center;
+}
+
+#lupa{
+    background-color: white;
+}
+
+#banner{
+    width: 100%;
+    display: none;
+}
+
+
+/*MAIN*/
+
+.main-navbar{
+    display: none;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+
+h2.titulares{
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+    align-items: center;
+}
+
+main section article i,
+.discount{
+    color: var(--verde)
+}
+
+article div,
+.main-articulo{
+    display: inline-block;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.tarjeta{
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+
+p.precios{
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+p.oferta {
+    display: block;
+    font-size: 16px;
+    margin: auto;
+}
+
+h3.descripcion{
+    color: var(--gris-oscuro)
+}
+
+
+/* FOOTER*/
+
+footer{
+    background-color: var(--gris-claro);
+    padding: 15px;
+}
+
+.cuerpo-texto{
+    font-size: 12px;
+}
+
+
+#iconos{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--celeste);
+}
