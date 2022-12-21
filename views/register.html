@@ -57,14 +57,57 @@
     <main>
         <form class="formulario-registro" action="/login" name="login" method="POST">
             <div class="control-formulario">
-                <input placeholder="Nombre de usuario" type="text" minlength="8" name="usuario" class="control">
+                <input placeholder="Nombre y apellido" minlength="8" type="text" name="nombre" class="control">
+            </div>
+            <div class="control-formulario">
+                <input placeholder="Nombre de usuario" type="text" name="usuario" class="control">
+            </div>
+            <div class="control-formulario">
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" name="nacimiento" class="control">
+            </div>
+            <div class="control-formulario">
+                <input placeholder="Domicilio" type="text" name="domicilio" class="control">
+            </div>
+            <div class="control-formulario">
+                <div class="control-check">
+                   <label for="perfil de usuario">Perfil de usuario</label>
+                   <div>
+                      <input type="radio" value="vendedor" class="control">
+                      <label for="vendedor">Vendedor</label>
+                   </div>
+                   <div>
+                      <input type="radio" value="comprador" class="control">
+                      <label for="comprador">Comprador</label>
+                   </div>
+                </div> 
+            </div>
+            <div class="control-formulario">
+                <label>Intereses</label>
+                <select name="categorias" class="control">
+                    <option value="">Elija una opción</option>
+                    <option value="Electro">Electro</option>
+                    <option value="Moda">Moda</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Jugueteria">Jugueteria</option>
+                    <option value="Vida sana">Vida sana</option>
+                </select>
+            </div>
+            <div class="control-formulario">
+                <label>Foto de perfil</label>
+                <input type="file" name="nombre" class="control">
             </div>
             <div class="control-formulario">
                 <label>Contraseña</label>
+                <input placeholder="**********" type="password" minlength="8" name="Contraseña" class="control">
+            </div>
+            <div class="control-formulario">
+                <label>Confirmar Contraseña</label>
                 <input placeholder="***********" type="password" minlength="8" name="Contraseña" class="control">
             </div>
-            <div class="control-boton-login">
-                <button class="boton-enviar-login"type="submit" nombre="enviar"> Enviar </button>
+            <div class="control-boton">
+                <button class="boton-borrar" type="reset" nombre="borrar">Borrar datos</button>
+                <button class="boton-enviar"type="submit" nombre="enviar"> Enviar </button>
             </div>
         </form>
     </main>
