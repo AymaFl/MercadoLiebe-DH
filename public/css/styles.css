@@ -24,40 +24,69 @@ body{
 
 .main-header{
     background-color: var(--amarillo);
-    padding: 5px;
+    padding: 18px;
     width: 100%;
 }
 
-.copy-header{
-    padding: 10px;
-    text-align: center;
+.main-header-top-bar{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
 }
 
+.buscador{
+    display: flex;
+    align-items: center;
+}
+
+.buscador input{
+    padding: 7px;
+    font-size: 12px;
+    height: 70%;
+    width:90%;
+    border: none;
+    border-right: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#lupa{
+    background-color: white;
+    font-size: 12px;
+    color: gray;
+    width: 10%;
+    padding: 8px 0;
+    text-align: left;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.copy-header{
+    display: block;
+    font-size: 12px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 400;
+}
 
 .burguer-menu{
     background-color: var(--azul);
     color: white;
     display: block;
-    max-width: 50px;
-    padding: 10px 0;
-    border-radius: 8px;
+    max-width: 40px;
+    padding: 8px 0;
+    border-radius: 6px;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
     margin: auto;
 }
 
+
 .logo{
-    width: 200px;
-}
-
-.copy-header{
-    font-size: 17px;
-    font-weight: 350;
-    align-items: center;
-}
-
-#lupa{
-    background-color: white;
+    width: 50%;
+    padding: 2px;
 }
 
 #banner{
@@ -73,14 +102,14 @@ body{
 
 .main-navbar ul{
     list-style: none;
-    margin: 5px;
+    margin: 3px;
 }
 
 .main-navbar a{
     text-decoration: none;
     color: #222222;
     padding: 5px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 /*MAIN*/
@@ -94,7 +123,7 @@ body{
 
 h2.titulares{
     justify-items: center;
-    font-size: 24px;
+    font-size: 18px;
     padding: 20px;
 }
 
@@ -164,8 +193,10 @@ h4.descripcion{
 
 
 /* FOOTER*/
+
 footer{
-    width: 90%;
+    background-color: #FFF;
+    width: 100%;
     margin: 0 auto
 }
 
@@ -193,51 +224,123 @@ section.subfooter{
     font-weight: 200;
     border-top: solid 1px var(--gris-oscuro);
     padding: 3px;
+    text-align: center;;
 }
 
 #iconos{
     font-size: 2em;
     padding: 2px;
     margin-top: 5px;
-    color: var(--celeste);
+    color: var(--azul);
 }
 
 .cuerpo-texto{
     font-size: 12px;
 }
 
+
+/*FORMULARIOS*/
+
+.formulario-registro{
+    display: block;
+    padding: 20px 10px;
+}
+.control-formulario{
+    margin: 10px 0;
+}
+
+.control-formulario label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.control{
+    width: 100%;
+    padding: 5px;
+    border: var(--gris-claro);
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 7px 0
+}
+
+.control-check{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.control-check input{
+    width: 14px;
+    margin: 0px 5px;
+    padding: 5px;
+}
+.control-check div label{
+    width: 14px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.control-boton{
+    display: flex;
+    align-items: center;
+}
+
+.boton-enviar{
+    background-color: var(--azul);
+    width: 50%;
+    color: var(--gris-claro);
+    font-size: 12px;
+    padding: 5px 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.boton-borrar{
+    background-color: rgb(134, 20, 20, 0.8);
+    width: 50%;
+    color: var(--gris-claro);
+    font-size: 12px;
+    padding: 5px 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
 /*MEDIAQUARIES*/
 
 @media (min-width: 426px){
-
-    .main-header-top-bar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .main-navbar{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .main-navbar ul{
-        align-items: center;
-        display: flex;
-        padding-top: 10px;
-    }
-
-    .main-navbar li{
-        margin: 5px;
-        flex-wrap: wrap;
-    }
-    .main-navbar a{
-        padding: 3px;
+    .buscador{
+        width: 200px;
     }
 
     .burguer-menu{
-        display: none;
+        margin-top: 20px;
+    }
+
+    section.main-header-top{
+        display: flex;
+        align-items: center;
+    }
+
+    .main-header-top-bar{
+        width: 70%;
+    }
+
+    .logo{
+        margin: 10px;
+        width: 50%;
+    }
+    
+    div.copy-header{
+        display: flex;
+        width: 100%;
+    }
+
+    .copy-header{
+        margin-top: 10px;
+        padding: 0;
     }
     
     main section.productos{
@@ -254,23 +357,82 @@ section.subfooter{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
+    /*Formularios*/
+
+
+}
+
+@media (min-width: 520px){
+    .logo{
+        width: 40%;
+    }
+
+    .buscador{
+        width: 200px;
+    }
+    
+    .burguer-menu{
+        display: none;
+    }
+
+    .main-navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul{
+        align-items: center;
+        display: flex;
+        padding-top: 7px;
+    }
+
+    .main-navbar li{
+        margin: 3px;
+        flex-wrap: wrap;
+    }
+
+    .main-navbar a{
+        padding: 3px;
+    }
 }
 
 @media (min-width: 760px){
+    .logo{
+        width: 30%;
+        margin-right: 5px;
+    }
 
-    .main-header{
-        padding: 10px;
+    .buscador{
+        width: 400px;
+        margin-right: 20px;
+    }
+
+    .buscador input{
+        padding: 9px;
+        font-size: 15px;
+    }
+    
+    #lupa{
+        font-size: 14px;
+        padding: 11px 0;
+    }
+
+    div.copy-header{
+        text-align: right;
+        align-items: flex-end;
     }
 
     .copy-header{
-        font-size: 20px;
-        padding: 10px;
+        font-size: 16px;
     }
+
     .main-header-top-bar{
-        justify-content: space-between;
+        margin: 5px 20px;
         align-items: center;
     }
     .main-navbar{
+        margin: 0 20px;
         font-size: 16px;
         display: flex;
         align-items: center;
@@ -314,7 +476,67 @@ section.subfooter{
         max-width: 40%;
         padding: 10px;
     }
+
+    main .formulario-registro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .control-formulario{
+        width: 50%;
+    }
+
+    .formulario-registro div label{
+        display: flex;
+        font-size: 16px;
+
+    }
+
+    .control{
+        font-size: 14px;
+    }
+
+    .control-check div{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0px;
+    }
+
+    .control-check div label{
+        font-size: 14px;
+    }
+
+    div.control-boton{
+        margin: 0;
+        width: 40%;
+        justify-content: space-around;
+    }
+
+    .boton-enviar{
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+    .boton-borrar{
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
 }
+
+/*////////////////////////////////////////////////
+@keyframes {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+       transform: rotate(260deg) scale(1.3); 
+    }
+}
+*/
+
+
+
 
 
 

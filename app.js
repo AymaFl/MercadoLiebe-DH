@@ -7,6 +7,10 @@ const publicPath = path.resolve(__dirname, "./public");
 
 app.use(express.static(publicPath));
 
+/*PREGUNTAR QUE ES ÉSTO*/
+app.set('views', path.resolve(__dirname, 'views'))
+app.set('view engine', 'ejs');
+
 let PORT = 3000
 
 app.listen(PORT, () => {
@@ -15,4 +19,8 @@ app.listen(PORT, () => {
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/home.html"))
+})
+
+app.get("/login", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/login.html"))
 })
