@@ -368,6 +368,7 @@ section.subfooter{
     }
 
     .buscador{
+        margin-right: 15px;
         width: 200px;
     }
     
@@ -398,6 +399,16 @@ section.subfooter{
 }
 
 @media (min-width: 760px){
+
+    .main-header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-header-top-bar{
+        width: 60%;
+    }
+
     .logo{
         width: 30%;
         margin-right: 5px;
@@ -405,7 +416,7 @@ section.subfooter{
 
     .buscador{
         width: 400px;
-        margin-right: 20px;
+        margin-right: 30px;
     }
 
     .buscador input{
@@ -419,12 +430,12 @@ section.subfooter{
     }
 
     div.copy-header{
-        text-align: right;
-        align-items: flex-end;
+        width: 40%;
     }
 
     .copy-header{
         font-size: 16px;
+        margin-right: 22px;
     }
 
     .main-header-top-bar{
