@@ -163,7 +163,7 @@ main section article i{
     border-radius: 50%;
     position: absolute;
     left: 20px;
-    top: -15px
+    top: -15px;
 }
 
 article div,
@@ -180,12 +180,13 @@ p.precios{
 
 p.oferta {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     margin: auto;
     color: var(--verde)
 }
 
 h4.descripcion{
+    display: none;
     color: var(--gris-oscuro);
     font-weight: 300;
     margin-bottom: 0px;
@@ -325,8 +326,6 @@ section.subfooter{
     border-radius: 5px;
 }
 
-
-
 /*MEDIAQUARIES*/
 
 @media (min-width: 426px){
@@ -338,28 +337,32 @@ section.subfooter{
         margin-top: 20px;
     }
 
-    section.main-header-top{
+    .main-header-top{
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
     .main-header-top-bar{
-        width: 70%;
+        width: 60%;
     }
 
     .logo{
         margin: 10px;
         width: 50%;
     }
-    
-    div.copy-header{
-        display: flex;
-        width: 100%;
-    }
 
     .copy-header{
         margin-top: 10px;
         padding: 0;
+        width: 100%;
+    }
+
+    main section article,
+    .tarjeta{
+        width: 40%;
+        flex-wrap: wrap;
+        padding: 10px;
     }
     
     main section.productos{
@@ -367,28 +370,16 @@ section.subfooter{
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
-    main section article,
-    .tarjeta{
-        width: 40%;
-        padding: 10px;
-        margin: 10px;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    footer section.main-footer{
+        padding: 20px 50px;
     }
-
-    /*Formularios*/
-
 
 }
 
 @media (min-width: 520px){
     .logo{
-        width: 40%;
-    }
-
-    .buscador{
-        margin-right: 15px;
-        width: 200px;
+        width: 30%;
     }
     
     .burguer-menu{
@@ -418,49 +409,34 @@ section.subfooter{
 }
 
 @media (min-width: 760px){
-
+    
     .main-header-top{
-        display: flex;
-        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .buscador{
+        width: 400px;
     }
 
-    .main-header-top-bar{
-        width: 60%;
+    .buscador input{
+        padding-left: 5px;
+        font-size: 16px;
+    }
+
+    #lupa{
+        font-size: 17px;
+        padding: 8px,
     }
 
     .logo{
         width: 30%;
-        margin-right: 5px;
-    }
-
-    .buscador{
-        width: 400px;
-        margin-right: 30px;
-    }
-
-    .buscador input{
-        padding: 9px;
-        font-size: 15px;
-    }
-    
-    #lupa{
-        font-size: 14px;
-        padding: 11px 0;
-    }
-
-    div.copy-header{
-        width: 40%;
     }
 
     .copy-header{
-        font-size: 16px;
-        margin-right: 22px;
+        font-size: 15px;
+        margin: 20px;
+        padding: 10px;
     }
 
-    .main-header-top-bar{
-        margin: 5px 20px;
-        align-items: center;
-    }
     .main-navbar{
         margin: 0 20px;
         font-size: 16px;
@@ -482,10 +458,33 @@ section.subfooter{
     
     main section article,
     .tarjeta{
-        max-width: 20%;
+        width: 20%;
         padding: 10px;
         margin: auto;
     }
+
+    .tarjeta{
+        margin: 10px;
+    }
+
+    .tarjeta:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+
+    h4.descripcion{
+        display: block;
+        visibility: hidden;
+    }
+
+    .tarjeta:hover .descripcion{
+        visibility: visible;
+    }
+
+    .tarjeta:hover #camion{
+        transform: rotate(-90deg);
+    }
+
     
     .menu-footer h4{
         padding: 10px
@@ -506,6 +505,8 @@ section.subfooter{
         max-width: 40%;
         padding: 10px;
     }
+
+    /*FORMULARIOS*/
 
     main .formulario-registro{
         display: flex;
@@ -559,16 +560,10 @@ section.subfooter{
     }
 }
 
-/*////////////////////////////////////////////////
-@keyframes {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-       transform: rotate(260deg) scale(1.3); 
-    }
-}
-*/
+
+
+
+
 
 
 
